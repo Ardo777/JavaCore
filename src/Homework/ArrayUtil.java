@@ -39,6 +39,25 @@ public class ArrayUtil {
         System.out.println("\n");
 
         //6
+        int k = 0;
+
+        System.out.println(k=(numbers[numbers.length / 2 ]));
+        boolean c=k>2;
+        System.out.println(c);
+        if (k<=2){
+            System.out.println("can't print middle values.");
+        }
+
+        if (numbers.length%2==0) {
+            System.out.print((numbers[numbers.length / 2-1 ]));
+            System.out.println(" ");
+            System.out.println((numbers[numbers.length / 2 ]));
+
+
+
+        } else System.out.println(k);
+
+        System.out.println("\n");
 
 
         //7
