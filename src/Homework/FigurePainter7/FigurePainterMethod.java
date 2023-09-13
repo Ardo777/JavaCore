@@ -11,24 +11,24 @@ public class FigurePainterMethod {
         }
     }
 
-    void figureTwo(int b,char k) {
+    void figureTwo(int b, char k) {
         for (int i = b; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                System.out.print(k+" ");
+                System.out.print(k + " ");
             }
             System.out.println();
         }
     }
 
-    void figureThree() {
-        int n = 5;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                System.out.print(" ");
+    void figureThree(int y,int b, char t) {
+
+        for (int i = y; i > 0; i--) {
+            for (int j = 0; j < i - 1; j++) {
+                System.out.print("  ");
 
             }
-            for (int k = 0; k < i + 1; k++) {
-                System.out.print('*');
+            for (int k = b; k >= i; k--) {
+                System.out.print(t + " ");
 
             }
             System.out.println();
@@ -37,39 +37,39 @@ public class FigurePainterMethod {
         }
     }
 
-    void figureFour() {
-        for (int i = 0; i < 5; i++) {
+    void figureFour(int k, int o, char v) {
+        for (int i = 0; i < k; i++) {
             for (int j = 0; j < i; j++) {
-                System.out.print(" ");
+                System.out.print("  ");
 
             }
-            for (int j = 5; j > i; j--) {
-                System.out.print("*");
+            for (int j = o; j > i; j--) {
+                System.out.print(v+" ");
 
             }
             System.out.println();
         }
     }
 
-    void figureFive() {
-        for (int i = 0; i < 5; i++) {
-            for (int j = 4; j > i; j--) {
+    void figureFive(int y,char b) {
+        for (int i = 0; i < y; i++) {
+            for (int j = y; j > i; j--) {
                 System.out.print(" ");
 
             }
             for (int j = 0; j <= i; j++) {
-                System.out.print("* ");
+                System.out.print(b+" ");
 
             }
             System.out.println();
         }
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < y; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print(" ");
 
             }
-            for (int j = 4; j > i; j--) {
-                System.out.print("* ");
+            for (int j = y; j > i; j--) {
+                System.out.print(b+" ");
 
             }
             System.out.println();

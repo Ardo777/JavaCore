@@ -5,11 +5,11 @@ public class Sort {
         int[] arrays = {4, 7, 1, 3, 9, 0, 2};
         int web;
         for (int i = 0; i < arrays.length; i++) {
-            for (int j = i; j < arrays.length; j++) {
-                if (arrays[i] > arrays[j]) {
+            for (int k = i; k < arrays.length; k++) {
+                if (arrays[i] > arrays[k]) {
                     web = arrays[i];
-                    arrays[i] = arrays[j];
-                    arrays[j] = web;
+                    arrays[i] = arrays[k];
+                    arrays[k] = web;
 
 
                 }
