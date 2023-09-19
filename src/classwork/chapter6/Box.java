@@ -9,9 +9,26 @@ public class Box {
         return widht * height * depth;
 
     }
-    void setDim(double w,double h,double d){
+    Box() {
+        System.out.println("Конструирование обьекта Box");
+        widht=10;
+        height=10;
+        depth=10;
+
+    }
+    Box(double w,double h,double d){
         widht=w;
         height=h;
         depth=d;
     }
+
+
+    void setDim(double w,double h, double d){
+        widht=w;
+        height=h;
+        depth=d;
+    }
+
 }
+
+
