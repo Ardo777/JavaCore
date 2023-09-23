@@ -37,6 +37,77 @@ public class DynamicArrayMethod {
         }
     }
 
+    public void deleteByIndex(int index) {
+        if (index < 0 || index < size) {
+            for (int j = index; j < size - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            size--;
+            for (int i = 0; i < size; i++) {
+                System.out.print(array[i] + " ");
+            }
+
+        } else System.out.println("-1");
+
+    }
+
+    public void set(int index, int value) {
+        if (index <= size) {
+            for (int i = 0; i < size; i++) {
+                array[index] = array[index + 1];
+                array[index + 1] = array[index];
+
+            }
+            array[index] = value;
+            for (int i = 0; i < size; i++) {
+
+
+                System.out.print(array[i] + " ");
+            }
+        } else
+            System.out.println("Index not found");
+
+
+    }
+
+    public void add(int index, int value) {
+        System.out.println();
+        if (index < 0 || index < size) {
+            for (int i = 0; i < size; i++) {
+                array[index] = array[index + 1];
+            }
+            array[index] = value;
+            for (int j = 0; j < size; j++) {
+                System.out.print(array[j] + " ");
+
+            }
+        } else
+            System.out.println("Index not found");
+
+    }
+
+    public boolean exists(int value) {
+        for (int i = 0; i < size; i++) {
+            if (value == array[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int getIndexByValue(int value) {
+        for (int i = 0; i < size; i++) {
+
+            if (value == array[i]) {
+                value = array[i];
+                return i;
+            }
+        }
+
+        return -1;
+    }
 }
+
+
 
 
