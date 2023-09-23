@@ -16,10 +16,10 @@ public class DynamicArrayTest {
         System.out.println();
         System.out.println("Geting index 7");
         System.out.println(da.getByIndex(7));
-        System.out.println(da.exists(5));
-        System.out.println(da.getIndexByValue(66));
-        da.deleteByIndex(3);
-        da.add(7, 10);
-        da.set(4, 7);
+        //System.out.println(da.exists(5));
+        //System.out.println(da.getIndexByValue(66));
+        da.deleteByIndex(5);
+        //da.add(7, 10);
+        //da.set(4, 7);
     }
 }

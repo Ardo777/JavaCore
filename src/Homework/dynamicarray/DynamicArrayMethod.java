@@ -38,7 +38,7 @@ public class DynamicArrayMethod {
     }
 
     public void deleteByIndex(int index) {
-        if (index < 0 || index < size) {
+        if (index > 0 && index < size) {
             for (int j = index; j < size - 1; j++) {
                 array[j] = array[j + 1];
             }
@@ -47,7 +47,8 @@ public class DynamicArrayMethod {
                 System.out.print(array[i] + " ");
             }
 
-        } else System.out.println("-1");
+        } else
+            System.out.println("Index not found");
 
     }
 
