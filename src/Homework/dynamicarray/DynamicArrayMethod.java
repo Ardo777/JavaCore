@@ -72,13 +72,18 @@ public class DynamicArrayMethod {
 
     public void add(int index, int value) {
         System.out.println();
-        if (index < 0 || index < size) {
-            for (int i = 0; i < size; i++) {
-                array[index] = array[index + 1];
+        if (index > 0 && index < size) {
+          int  newarray[]=new int[size+1];
+            for (int i = 0; i < index; i++) {
+                newarray[i]=array[i];
+
             }
-            array[index] = value;
-            for (int j = 0; j < size; j++) {
-                System.out.print(array[j] + " ");
+            newarray[index]=value;
+            for (int i = index+1; i < newarray.length ; i++) {
+                newarray[i ] = array[i-1];
+            }
+            for (int j = 0; j < newarray.length; j++) {
+                System.out.print(newarray[j] + " ");
 
             }
         } else
@@ -99,7 +104,6 @@ public class DynamicArrayMethod {
         for (int i = 0; i < size; i++) {
 
             if (value == array[i]) {
-                value = array[i];
                 return i;
             }
         }
