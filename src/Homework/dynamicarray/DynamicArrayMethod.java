@@ -71,7 +71,6 @@ public class DynamicArrayMethod {
     }
 
     public void add(int index, int value) {
-        System.out.println();
         if (index > 0 && index < size) {
             int newarray[] = new int[size + 1];
             for (int i = 0; i < index; i++) {

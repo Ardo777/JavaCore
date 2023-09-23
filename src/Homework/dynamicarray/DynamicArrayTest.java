@@ -22,8 +22,10 @@ public class DynamicArrayTest {
         System.out.println(da.getIndexByValue(66));
         System.out.println("Deleting index 5");
         da.deleteByIndex(5);
+        System.out.println();
         System.out.println("Add the entered value in the entered index, and shift the existing elements to the right,if there is no such index, print that it does not exist");
         da.add(3, 10);
+        System.out.println();
         System.out.println("The entered value in the entered index with the loss of the old value,if not -1");
         da.set(3, 10);
     }
