@@ -56,7 +56,6 @@ public class DynamicArrayMethod {
         if (index <= size) {
             for (int i = 0; i < size; i++) {
                 array[index] = array[index + 1];
-                array[index + 1] = array[index];
 
             }
             array[index] = value;
