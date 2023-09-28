@@ -15,10 +15,7 @@ public class DynamicArrayMethod {
 
     private void extend() {
         int[] newarray = new int[array.length + 10];
-        for (int i = 0; i < size; i++) {
-            newarray[i] = array[i];
-
-        }
+        System.arraycopy(array,0,newarray,0,size);
         array = newarray;
 
     }
@@ -54,10 +51,6 @@ public class DynamicArrayMethod {
 
     public void set(int index, int value) {
         if (index <= size) {
-            for (int i = 0; i < size; i++) {
-                array[index] = array[index + 1];
-
-            }
             array[index] = value;
             for (int i = 0; i < size; i++) {
 
@@ -71,7 +64,7 @@ public class DynamicArrayMethod {
     }
 
     public void add(int index, int value) {
-        if (index > 0 && index < size) {
+        if (index >= 0 && index < size) {
             int newarray[] = new int[size + 1];
             for (int i = 0; i < index; i++) {
                 newarray[i] = array[i];
