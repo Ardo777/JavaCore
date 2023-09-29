@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class BraceCheckerMethod {
     String text;
-    boolean iscorect = true;
-    int tmp;
-    int size;
+    private boolean inncorrect = true;
+    private char tmp;
+    private int size;
 
 
     StackMethod stck = new StackMethod();
@@ -24,34 +24,17 @@ public class BraceCheckerMethod {
                     stck.push(text.charAt(size));
                     break;
                 case '}':
-                    if (stck.getSize() < 0) {
-                        System.err.println("Error: closed " + text.charAt(size) + "but don't opened " + (size + 1));
-                        iscorect = false;
-                    } else if (tmp != '{') {
-                        tmp = stck.pop();
-                        System.err.println("Error: opened " + (char) tmp + "but closed" + text.charAt(size) + " " + (size + 1));
-                        iscorect = false;
-                    }
-                    break;
                 case ']':
-                    if (stck.getSize() < 0) {
-                        System.err.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
-                        iscorect = false;
-                    } else if (tmp != '[') {
-                        tmp = stck.pop();
-                        System.err.println("Error: opened " + (char) tmp + " " + "but closed" + text.charAt(size) + " " + (size + 1));
-                        iscorect = false;
-                    }
-
-                    break;
                 case ')':
-                    if (stck.getSize() < 0) {
+                    if (stck.getSize() == -1) {
                         System.err.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
-                        iscorect = false;
-                    } else if (tmp != '(') {
-                        tmp = stck.pop();
-                        System.err.println("Error: opened " + (char) tmp + " but closed" + text.charAt(size) + " " + (size + 1));
-                        iscorect = false;
+                        inncorrect = false;
+                    } else {
+                        tmp = (char) stck.pop();
+                        if (tmp != '(' && text.charAt(size) == ')' || tmp != '[' && text.charAt(size) == ']' || tmp != '{' && text.charAt(size) == '}') {
+                            System.err.println("Error: opened " + tmp + " but closed " + text.charAt(size) + " " + (size + 1));
+                            inncorrect = false;
+                        }
                     }
 
                     break;
@@ -59,17 +42,14 @@ public class BraceCheckerMethod {
 
             }
         }
-
-        int size = stck.getSize();
-        for (int i = size; i >= 0; i--) {
-            tmp = stck.pop();
-            System.err.println("Error: " + (char) tmp + " " + "opened but dont closed");
-            iscorect = false;
+        for (int i = stck.getSize(); i >= 0; i--) {
+            System.err.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
+            inncorrect = false;
 
         }
 
-        if (iscorect) {
-            System.out.println("Text Iscorect");
+        if (inncorrect) {
+            System.out.println("Text Inncorrect");
         }
 
     }
