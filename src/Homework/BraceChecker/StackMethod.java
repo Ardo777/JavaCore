@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class StackMethod {
     int stck[] = new int[10];
-   private int tos;
+    private int tos;
 
 
     StackMethod() {
@@ -25,7 +25,14 @@ public class StackMethod {
             return 0;
         } else return stck[tos--];
     }
-    public int getSize(){
+
+    private void extend() {
+        int newstck[] = new int[stck.length + 10];
+        System.arraycopy(stck, 0, newstck, 0, tos);
+        stck = newstck;
+    }
+
+    public int getSize() {
         return tos;
     }
 }
