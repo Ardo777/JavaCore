@@ -1,17 +1,15 @@
-package Homework.BraceChecker;
+package Homework.Bracechecker;
 
-import java.util.Stack;
-
-public class BraceCheckerMethod {
+public class BraceChecker {
     String text;
     private boolean inncorrect = true;
     private char tmp;
     private int size;
 
 
-    StackMethod stck = new StackMethod();
+    Stack stck = new Stack();
 
-    public BraceCheckerMethod(String text) {
+    public BraceChecker(String text) {
         this.text = text;
     }
 

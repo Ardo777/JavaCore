@@ -1,7 +1,5 @@
 package classwork.chapter6.stack;
 
-import Homework.BraceChecker.StackMethod;
-
 //public class StackTest {
 //    public static void main(String[] args) {
 //        StackMethod myStack1 = new StackMethod();

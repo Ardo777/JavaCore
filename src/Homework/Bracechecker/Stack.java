@@ -1,13 +1,11 @@
-package Homework.BraceChecker;
+package Homework.Bracechecker;
 
-import java.util.Stack;
-
-public class StackMethod {
+public class Stack {
     int stck[] = new int[10];
     private int tos;
 
 
-    StackMethod() {
+    Stack() {
         tos = -1;
     }
 

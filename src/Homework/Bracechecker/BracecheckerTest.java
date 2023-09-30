@@ -1,8 +1,8 @@
-package Homework.BraceChecker;
+package Homework.Bracechecker;
 
 public class BracecheckerTest {
     public static void main(String[] args) {
-        BraceCheckerMethod bcm=new BraceCheckerMethod("{H{{{{{ello) [i'am} (Ardo]");
+        BraceChecker bcm=new BraceChecker("{H{{{{{ello) [i'am} (Ardo]");
         bcm.check();
 
     }
