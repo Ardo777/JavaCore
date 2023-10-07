@@ -2,9 +2,12 @@ package Homework.employee;
 
 import classwork.libraray.Book;
 
+import java.util.Scanner;
+
 public class employeeStorage {
     private Employee[] employes = new Employee[10];
     private int size;
+    Scanner scanner = new Scanner(System.in);
 
     public void add(Employee employee) {
         if (size == employes.length) {
@@ -43,6 +46,41 @@ public class employeeStorage {
             }
         }
 
+    }
+
+    public void deletebyid(String tmp) {
+
+        for (int i = 0; i < size; i++) {
+            if (tmp.equals(employes[i].getEmployeeID())) {
+                for (int j = i; j < size; j++) {
+                    employes[i] = employes[i + 1];
+                }
+                size--;
+            }
+        }
+        System.out.println("Employes " + tmp + " deleted!");
+
+    }
+
+    public void Changeemployeebyid(String tmp) {
+
+        for (int i = 0; i < size; i++) {
+            if (tmp.equals(employes[i].getEmployeeID())) {
+                System.out.println("Please edit employes name");
+                employes[i].setName(scanner.nextLine());
+                System.out.println("Please edit employes surname");
+                employes[i].setSurname(scanner.nextLine());
+                System.out.println("Please edit employes salary");
+                employes[i].setSalary(Double.parseDouble(scanner.nextLine()));
+                System.out.println("Please edit employes company");
+                employes[i].setCompany(scanner.nextLine());
+                System.out.println("Please edit employes position");
+                employes[i].setPosition(scanner.nextLine());
+
+                break;
+            }
+        }
+        System.out.println("Employe " + tmp + " changed");
     }
 
 
