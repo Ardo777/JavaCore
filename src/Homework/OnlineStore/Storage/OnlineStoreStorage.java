@@ -61,6 +61,7 @@ public class OnlineStoreStorage {
         for (int i = 0; i <=size; i++) {
             if (array[i]instanceof Order order && order.getId().equals(orderId)){
                 order.setOrderStatus(OrderStatus.CANCELED);
+                order=null;
             }
         }
     }
@@ -102,7 +103,6 @@ public class OnlineStoreStorage {
     }
 
     public boolean delete(String productId) {
-
         for (int i = 0; i < size; i++) {
             if (array.length != 0) {
                 Product product = (Product) array[i];
@@ -112,9 +112,10 @@ public class OnlineStoreStorage {
                 } else
                     System.out.println("invalid product id,please try again!");
                 return true;
+            }else {
+                System.out.println("Storage is empty");
             }
         }
-
         return false;
     }
 
