@@ -20,6 +20,7 @@ public  class Order {
                 "user=" + user +
                 ", product=" + product +
                 ", orderStatus=" + orderStatus +
+                ", id=" + id +
                 ", date=" + date +
                 ", price=" + price +
                 ", count=" + count +
