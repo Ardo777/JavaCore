@@ -197,7 +197,7 @@ public class Main implements Commands {
 
     private static void deleteProductById() {
         productStorage.printAllProducts();
-        if (productStorage.empty()) {
+        if (!productStorage.isEmpty()) {
             System.out.println("Please input product id for deleting");
             String productId = scanner.nextLine();
             if (productStorage.deleteProductById(productId)) {

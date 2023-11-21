@@ -2,7 +2,6 @@ package Homework.OnlineStore.Storage;
 
 import Homework.OnlineStore.model.Order;
 import Homework.OnlineStore.model.OrderStatus;
-import Homework.OnlineStore.model.Product;
 
 import java.util.LinkedList;
 
@@ -22,30 +21,22 @@ public class OrderStorage {
     }
 
     public void printOrders() {
-        if (empty()) {
+        if (!orderLinkedList.isEmpty()) {
             for (Order order : orderLinkedList) {
                 System.out.println(order);
             }
         }
     }
 
-    public boolean empty() {
-        orderLinkedList.isEmpty();
-        return false;
-    }
 
 
-    public Product changeOrderStatus(String id) {
+    public void changeOrderStatus(String id) {
         for (Order order : orderLinkedList) {
             if (order.getId().equals(id)) {
                 order.setOrderStatus(OrderStatus.DELIVERED);
                 order.getProduct().setCount(order.getProduct().getCount() - order.getCount());
-                if (order.getProduct().getCount() == 0) {
-                    return order.getProduct();
-                }
             }
         }
-        return null;
     }
     public void cancelOrderById(String orderId) {
         boolean exist = false;
