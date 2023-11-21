@@ -41,7 +41,7 @@ public class ProductStorage {
 
     public boolean empty(){
         productHashSet.isEmpty();
-        return true;
+        return false;
     }
 
 public void addProduct(Product product){

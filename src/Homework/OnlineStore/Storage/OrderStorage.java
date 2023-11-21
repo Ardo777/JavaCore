@@ -31,7 +31,7 @@ public class OrderStorage {
 
     public boolean empty() {
         orderLinkedList.isEmpty();
-        return true;
+        return false;
     }
 
 
