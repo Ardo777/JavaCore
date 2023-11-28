@@ -1,4 +1,4 @@
-package Homework.OnlineStore.Util;
+package Homework.OnlineStore.util;
 
 public class UUID {
     public static String idGenerate() {

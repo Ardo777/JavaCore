@@ -1,4 +1,4 @@
-package Homework.OnlineStore.Util;
+package Homework.OnlineStore.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

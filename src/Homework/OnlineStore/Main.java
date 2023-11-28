@@ -1,9 +1,9 @@
 package Homework.OnlineStore;
 
-import Homework.OnlineStore.Commands.Commands;
-import Homework.OnlineStore.Storage.OrderStorage;
-import Homework.OnlineStore.Storage.ProductStorage;
-import Homework.OnlineStore.Storage.UserStorage;
+import Homework.OnlineStore.commands.Commands;
+import Homework.OnlineStore.storage.OrderStorage;
+import Homework.OnlineStore.storage.ProductStorage;
+import Homework.OnlineStore.storage.UserStorage;
 import Homework.OnlineStore.model.*;
 
 import java.util.Date;

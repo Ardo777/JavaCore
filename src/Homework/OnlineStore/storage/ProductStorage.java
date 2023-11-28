@@ -1,4 +1,4 @@
-package Homework.OnlineStore.Storage;
+package Homework.OnlineStore.storage;
 
 import Homework.OnlineStore.model.Product;
 

@@ -1,6 +1,6 @@
 package Homework.OnlineStore.model;
 
-import Homework.OnlineStore.Util.UUID;
+import Homework.OnlineStore.util.UUID;
 
 public class Product {
     private String id;
